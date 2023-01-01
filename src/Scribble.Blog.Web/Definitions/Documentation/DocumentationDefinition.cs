@@ -1,11 +1,9 @@
 ﻿using Calabonga.AspNetCore.AppDefinitions;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.OpenApi.Models;
-using Scribble.Blog.Web.Infrastructure.Attributes;
 
-namespace Scribble.Blog.Web.Definitions.Swagger;
+namespace Scribble.Blog.Web.Definitions.Documentation;
 
-public class SwaggerDefinition : AppDefinition
+public class DocumentationDefinition : AppDefinition
 {
     private const string ApplicationVersion =
         $"{ThisAssembly.Git.SemVer.Major}.{ThisAssembly.Git.SemVer.Minor}.{ThisAssembly.Git.SemVer.Patch}";
@@ -14,11 +12,6 @@ public class SwaggerDefinition : AppDefinition
         
     public override void ConfigureServices(IServiceCollection services, WebApplicationBuilder builder)
     {
-        services.Configure<ApiBehaviorOptions>(options =>
-        {
-            options.SuppressModelStateInvalidFilter = true;
-        });
-
         services.AddEndpointsApiExplorer();
 
         services.AddSwaggerGen(options =>

@@ -1,4 +1,5 @@
 ﻿using Calabonga.AspNetCore.AppDefinitions;
+using MediatR;
 
 namespace Scribble.Blog.Web.Definitions;
 
@@ -10,6 +11,9 @@ public class BaseDefinition : AppDefinition
         services.AddHttpContextAccessor();
         services.AddResponseCaching();
         services.AddMemoryCache();
+        
+        services.AddAutoMapper(typeof(Program).Assembly);
+        services.AddMediatR(typeof(Program));
 
         services.AddRouting(options =>
         {

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Scribble.Blog.Infrastructure.Contexts;
 
-namespace Scribble.Blog.Web.Definitions.Data;
+namespace Scribble.Blog.Web.Definitions.Context;
 
 public class ContextDefinition : AppDefinition
 {

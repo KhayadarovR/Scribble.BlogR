@@ -76,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1672557296687</updated>
-      <workItem from="1672557338073" duration="6886000" />
+      <workItem from="1672557338073" duration="9230000" />
     </task>
     <servers />
   </component>
@@ -86,37 +86,5 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Scribble.Blog.Web/Features/Commands/PostBlogEntityCommand.cs</url>
-          <line>33</line>
-          <properties documentPath="C:\Users\alexa\Desktop\Scribble.Blog\src\Scribble.Blog.Web\Features\Commands\PostBlogEntityCommand.cs" initialLine="33" containingFunctionPresentation="method 'Handle'">
-            <startOffsets>
-              <option value="1011" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1097" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Scribble.Blog.Web/Controllers/BlogEntityController.cs</url>
-          <line>29</line>
-          <properties documentPath="C:\Users\alexa\Desktop\Scribble.Blog\src\Scribble.Blog.Web\Controllers\BlogEntityController.cs" initialLine="29" containingFunctionPresentation="method 'PostBlog'">
-            <startOffsets>
-              <option value="1012" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1129" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
