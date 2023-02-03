@@ -9,7 +9,7 @@ public class BlogEntityDbContextFactory : IDesignTimeDbContextFactory<BlogEntity
     {
         var builder = new DbContextOptionsBuilder<BlogEntityDbContext>();
         builder.UseSqlServer(
-            "Server=localhost;Database=Scribble.Blog;User Id=sa;Password=du85txss10;TrustServerCertificate=True;Trusted_Connection=True;");
+            "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Scribble.Blog;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         return new BlogEntityDbContext(builder.Options);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Scribble.Blog.Models;
 using Scribble.Blog.Web.Definitions.Documentation;
 using Scribble.Blog.Web.Features.Commands;
 using Scribble.Blog.Web.Features.Queries;
@@ -12,9 +13,13 @@ namespace Scribble.Blog.Web.Controllers;
 public class BlogEntityController : ControllerBase
 {
     private readonly IMediator _mediator;
-    
-    public BlogEntityController(IMediator mediator) =>
+    private readonly IBlogEntityRepository _repository;
+
+    public BlogEntityController(IMediator mediator, IBlogEntityRepository repository)
+    {
         _mediator = mediator;
+        _repository = repository;
+    }
 
     [HttpGet("{id:guid}")]
     [FeatureGroupName("BlogEntity")]
@@ -22,6 +27,15 @@ public class BlogEntityController : ControllerBase
     public async Task<BlogEntityViewModel> GetBlogById(Guid id) =>
         await _mediator.Send(new GetBlogByIdQuery(id), HttpContext.RequestAborted)
             .ConfigureAwait(false);
+
+    [HttpGet]
+    [FeatureGroupName("BlogEntity")]
+    [ProducesResponseType(typeof(BlogEntityViewModel), StatusCodes.Status200OK)]
+    public List<BlogEntity> GetBlogs()
+    {
+        return _repository.GetBlogs();
+    }
+    
 
     [HttpPost]
     [FeatureGroupName("BlogEntity")]
